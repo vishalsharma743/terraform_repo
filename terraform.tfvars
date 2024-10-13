@@ -1,0 +1,9 @@
+region_name = "us-east-1"
+#instance_ami  = data.aws_ami.amazonLinux.id
+instance_name        = "web-key-server"
+ssh_key_name         = "id_rsa"
+securityGroup        = "my_sec_grp"
+inboundPorts         = [22, 80, 443]
+ami_root_device_type = "ebs"
+ami_virtualization   = "hvm"
+amiName              = "al2023-ami-2023.5.20241001.1-kernel-6.1-x86_64"
