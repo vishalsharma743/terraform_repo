@@ -1,6 +1,7 @@
 resource "aws_security_group" "my_security_group" {
   name        = var.securityGroup
   description = "Allow TLS inbound traffic and all outbound traffic"
+  vpc_id      = aws_vpc.my_vpc.id
   dynamic "ingress" {
     for_each = var.inboundPorts
     iterator = port
